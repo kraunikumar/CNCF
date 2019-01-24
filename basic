@@ -1,0 +1,56 @@
+Link of 
+  - compute and storage
+  - Infra-as-service ( need Devops engineers)
+    - Too much OPS
+    - Migration is painfull
+  - Platform-as-service ( no need of devops engineers )
+    - Lock-in to cloud provider
+    - Less control over infra
+ 
+ What is a container ?
+ Features of kubernetes :
+ Auto-healing: crashed containers should restart.
+ Auto-scaling: More cilents more demand
+ Load-balancing: Distributed client request
+ Isolation: Sandboxes so that containers don't interfer
+ 
+ 
+ 
+ Volumes:
+ Epmtydir 
+  - lifertime : pod
+  
+  cloud Volumes: 
+    - aws: EBS only
+    - AZURe: azureDisk, azureFile
+    - GCP: gcePersistentDisk
+    
+ Kubernetes native volumes:
+ secreat
+ consfigmap
+ gitrepo
+ 
+ 
+Persistant volume provinisioning :
+static : admin need to creat volume.
+dynamic : stotageclass -> Claim
+
+
+types of volumes:
+emptyDir:
+  - shared directory for all the container inside the pod.
+  - Scratch space, checkingpointing
+Configmap
+   it constines list of key value pairs, can be refference in a volume and volume can be refferenced by cntainers running inside the pod
+   
+gitrepo
+hostpath:-
+  Mount file/dictory from host into the pod
+  usecase : docekr internals, cadvisor, weather the host path exsists befor volume come into exsistance.
+  
+secret:
+  pass secreat info to pods
+  secret volumes are backed by RAM based file system which ensures the conters are never written to non volital storage
+  Base 64 enconding: echo -n 'my-app' | base64
+  it has only base 64 strings.
+
