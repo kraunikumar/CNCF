@@ -22,6 +22,28 @@ Liveness Probe:
   Restart policy will kick in
   Usecase : Kill and restart if probe Fails
   
+  Three types:
+  
+    cmd
+    Htttp
+    tcp
+  
+  objects:
+    initialDelaySeconds: time to start the first probe
+    periodSeconds: intervel between two probes
+    Ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/ 
+  Example:
+  
+    livenessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/helathy
+      initialDelaySeconds: 5
+      periodSeconds: 5
+      
+      
+  
 Readiness Probes:
   End point object will take out the IP's from the pod and services.
   sends trafic only afte the probe is sucessful.
