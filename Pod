@@ -47,3 +47,10 @@ Liveness Probe:
 Readiness Probes:
   End point object will take out the IP's from the pod and services.
   sends trafic only afte the probe is sucessful.
+  
+Pod_preset: It is the way to inject specific information into the pods during run time.
+  specific info: secreats, volumes, env
+  
+Pod_priorities
+  
+ 
