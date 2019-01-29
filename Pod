@@ -1,0 +1,27 @@
+
+Pod Phase  ( PodStatus.Phase ) :
+
+Pending : Accepted by kubernetes but not yet started. Might be pulling images or attaching volumes
+Running: all are runing
+Succeeded : sucessfully terminitated
+Failed: terminated with non-zero exit
+Unknown: problem with kubernetes cluster
+
+Restart Policy:
+Always (default )
+on-failure 
+Never
+
+Components of Kubernetes node:
+kubelet
+kube-proxy
+docker engine
+
+
+Liveness Probe:
+  Restart policy will kick in
+  Usecase : Kill and restart if probe Fails
+  
+Readiness Probes:
+  End point object will take out the IP's from the pod and services.
+  sends trafic only afte the probe is sucessful.
