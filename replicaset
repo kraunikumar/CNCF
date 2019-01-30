@@ -1,0 +1,18 @@
+Replicaset : self-healing and autoscaling for a pod.
+  Podtemplate
+  number of replicas
+  Self-healing
+  
+Deployments: 
+  Replicaset
+  Versioning
+  Advance deployments: blue-green, canary.
+  Fast roleback.
+  
+Pods are by default Vulnarable
+
+Kubernetes Controllers:
+  - replicaset
+  - Deployment
+  - DaemonSet
+  - Statefullset
